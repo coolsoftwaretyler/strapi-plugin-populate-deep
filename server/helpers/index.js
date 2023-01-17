@@ -10,7 +10,9 @@ const getModelPopulationAttributes = (model) => {
 };
 
 const getFullPopulateObject = (modelUid, maxDepth = 20) => {
-  const skipCreatorFields = strapi.plugin('strapi-plugin-populate-deep')?.config('skipCreatorFields');
+  const skipCreatorFields = strapi
+    .plugin("strapi-plugin-populate-deep-no-engine-constraints")
+    ?.config("skipCreatorFields");
 
   if (maxDepth <= 1) {
     return true;
@@ -36,7 +38,7 @@ const getFullPopulateObject = (modelUid, maxDepth = 20) => {
       } else if (value.type === "relation") {
         const relationPopulate = getFullPopulateObject(
           value.target,
-          (key === 'localizations') && maxDepth > 2 ? 1 : maxDepth - 1
+          key === "localizations" && maxDepth > 2 ? 1 : maxDepth - 1
         );
         if (relationPopulate) {
           populate[key] = relationPopulate;
@@ -50,5 +52,5 @@ const getFullPopulateObject = (modelUid, maxDepth = 20) => {
 };
 
 module.exports = {
-  getFullPopulateObject
-}
+  getFullPopulateObject,
+};

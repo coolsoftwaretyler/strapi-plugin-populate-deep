@@ -1,12 +1,12 @@
 # Strapi plugin populate-deep
-This plugin allows for easier population of deep content structures using the rest API.
+
+This plugin allows for easier population of deep content structures using the rest API. It's a fork of https://github.com/Barelydead/strapi-plugin-populate-deep, but I don't intend to really maintain it. Useful in the short term.
 
 # Installation
 
-`npm install strapi-plugin-populate-deep`
+`npm install strapi-plugin-populate-deep-no-engine-constraints`
 
-`yarn add strapi-plugin-populate-deep`
-
+`yarn add strapi-plugin-populate-deep-no-engine-constraints`
 
 # Usages
 
@@ -49,4 +49,5 @@ module.exports = ({ env }) => ({
 ```
 
 # Contributions
+
 The original idea for getting the populate structure was created by [tomnovotny7](https://github.com/tomnovotny7) and can be found in [this](https://github.com/strapi/strapi/issues/11836) github thread
