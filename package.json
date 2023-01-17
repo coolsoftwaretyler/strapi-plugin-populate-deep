@@ -1,24 +1,19 @@
 {
-  "name": "strapi-plugin-populate-deep",
+  "name": "strapi-plugin-populate-deep-no-engine-constraints",
   "version": "1.1.2",
-  "description": "This is the description of the plugin.",
-  "strapi": {
-    "name": "strapi-plugin-populate-deep",
-    "description": "Api helper to populate deep content structures.",
-    "kind": "plugin"
-  },
+  "description": "strapi-plugin-populate-deep, but without any Node engine constraints in package.json",
   "dependencies": {},
   "author": {
-    "name": "Christofer Jungberg"
+    "name": "Tyler Williams"
   },
   "maintainers": [
     {
-      "name": "Christofer Jungberg"
+      "name": "Tyler Williams"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Barelydead/strapi-plugin-deep-populate"
+    "url": "https://github.com/coolsoftwaretyler/strapi-plugin-populate-deep"
   },
   "license": "MIT"
 }
